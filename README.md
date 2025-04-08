@@ -10,7 +10,7 @@
 ##### [White Abstract](https://mrabsurdick.github.io/TildaHomePage/?putTheme=%7B%22transition%22%3A%22200ms%22%2C%22color_bg_first%22%3A%22%23abbfbf99%22%2C%22color_bg_second%22%3A%22%23abbfbfCC%22%2C%22color_fg_title%22%3A%22%230c2525%22%2C%22color_fg_subtitle%22%3A%22%232a2a2a%22%2C%22color_fg_text%22%3A%22%23DDD%22%2C%22color_fg_subtext%22%3A%22%233c3f41%22%2C%22border_radius%22%3A%224px%22%2C%22bookmark_icons%22%3A%22block%22%2C%22background_image%22%3A%22https%3A%2F%2Fr4.wallpaperflare.com%2Fwallpaper%2F177%2F182%2F521%2Fabstract-fantasy-art-simple-background-digital-art-wallpaper-d9d0286d31aa1d4b96a7785f9041168d.jpg%22%2C%22background_blur%22%3A%224px%22%2C%22panel_blur%22%3A%2215px%22%7D)
 
 ##### [AnimeNaAwieMatWKanawie](https://mrabsurdick.github.io/TildaHomePage/?putTheme=%7B%22transition%22%3A%22200ms%22%2C%22color_bg_first%22%3A%22%23202125CC%22%2C%22color_bg_second%22%3A%22%231f2023AA%22%2C%22color_fg_title%22%3A%22%23ec8490%22%2C%22color_fg_subtitle%22%3A%22%2380cbdc%22%2C%22color_fg_text%22%3A%22%23DDD%22%2C%22color_fg_subtext%22%3A%22%238c98aa%22%2C%22border_radius%22%3A%224px%22%2C%22bookmark_icons%22%3A%22block%22%2C%22background_image%22%3A%22https%3A%2F%2Fr4.wallpaperflare.com%2Fwallpaper%2F260%2F374%2F410%2Fanime-comic-art-anime-girls-collage-animal-ears-hd-wallpaper-f9e0e84d91da5d5b26d748ef5051663d.jpg%22%2C%22background_blur%22%3A%220px%22%2C%22panel_blur%22%3A%2215px%22%7D)
-![https://github.com/MrAbsurdick/TildaHomePage/blob/main/preview/AnimeNaAwieMatWKanawie.png]
+![https://github.com/MrAbsurdick/TildaHomePage/blob/main/preview/AnimeNaAwieMatWKanawie.png)
 
 ---
 
