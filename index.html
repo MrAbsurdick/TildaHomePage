@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/ua-parser-js@1.0.2/dist/ua-parser.min.js"></script>
+        <script src="./scripts/config.js"></script>
+        <script src="./scripts/manageDOM.js"></script>
+        <script src="./scripts/urlManage.js"></script>
+        <script src="./scripts/manageTree.js"></script>
+        <script src="./scripts/themeManage.js"></script>
+        <script src="./scripts/script.js"></script>
+        <script src="./scripts/defer.js" defer></script>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <title>Home Page</title>
+    </head>
+    <body>
+        <panel>
+            <header>
+                <h1><span id="welcomeTextBefore" class="parent_color">Welcome back, </span><span id="welcomeTextUsername">my Friend</span><span id="welcomeTextAfter" class="parent_color">!</span></h1>
+                <spaser></spaser>
+                <h1><span id="timeHours">--</span>:<span id="timeMinutes">--</span>:<span id="timeSeconds">--</span> | <span id="dateDayOfTheWeek">Day</span> - <span id="dateDay">--</span>/<span  id="dateMonth">--</span>/<span  id="dateYear">----</span> |</h1>
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings2-icon lucide-settings-2"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>
+                </button>
+            </header>
+            <br>
+            <br>
+            <form action="https://www.duckduckgo.com/" method="get" id="searchForm">
+                <h2><span id="browserType">browser</span>@<span id="searchEngineType">duckduckgo</span>: ~$</h2>
+                <!-- <input type="text" placeholder="`ctrl + shift + enter` to open in a new tab" id="queryInput" name="q" autocomplete="off"> -->
+                <input type="text" placeholder="`ctrl + shift + click` to open bookmark in a new tab" id="queryInput" name="q" autocomplete="off">
+                <button type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                </button>
+            </form>
+            <br>
+            <hr>
+            <br>
+            <br>
+            <main>
+                <header>
+                    <h2>Saved Bookmarks:</h2>
+                    <button id="createNewBookmarkFolderButton">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder-plus-icon lucide-folder-plus"><path d="M12 10v6"/><path d="M9 13h6"/><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg>
+                    </button>
+                </header>
+                <br>
+                <widgets>
+                </widgets>
+            </main>
+        </panel>
+
+        <!-- Create New Bookmark -->
+        <window id="createNewBookmarkWindow" style="display: none;">
+            <panel>
+                <header>
+                    <h2>Create new bookmark</h2>
+                </header>
+                <br>
+                <br>
+                <div>
+                    <label for="create-bookmark-name">Title: </label>
+                    <input type="text" id="createBookmarkTitle" name="create-bookmark-name">
+                </div>
+                <br>
+                <div>
+                    <label for="create-bookmark-url">Url: </label>
+                    <input type="url" id="createBookmarkUrl" name="create-bookmark-url">
+                </div>
+                <br>
+                <div>
+                    <label for="create-bookmark-icon-url">Icon url: </label>
+                    <input type="url" id="createBookmarkIconUrl" name="create-bookmark-icon-url">
+                    <!-- <button>auto</button> -->
+                </div>
+                <br>
+                <div>
+                    <label for="create-bookmark-folder-id">Folder id: </label>
+                    <input type="text" id="createBookmarkFolderId" name="create-bookmark-folder-id" disabled>
+                </div>
+                <br>
+                <br>
+                <flex>
+                    <button id="createBookmarkButtonCancel"><span>Cancel</span></button>
+                    <button id="createBookmarkButtonSave" ><span>Save</span></button>
+                </flex>
+            </panel>
+        </window>
+
+        <!-- Edit Bookmark -->
+        <window id="editBookmarkWindow" style="display: none;">
+            <panel>
+                <header>
+                    <h2>Edit bookmark</h2>
+                </header>
+                <br>
+                <br>
+                <main>
+                    <div><label for="edit-bookmark-name">Title: </label><input type="text" id="editBookmarkTitle" name="edit-bookmark-name"></div>
+                    <br>
+                    <div><label for="edit-bookmark-url">Url: </label><input type="text" id="editBookmarkUrl" name="edit-bookmark-url"></div>
+                    <br>
+                    <div><label for="edit-bookmark-icon-url">Icon url: </label><input type="text" id="editBookmarkIconUrl" name="edit-bookmark-icon-url"><!-- <button>auto</button> --></div>
+                    <br>
+                    <div><label for="edit-bookmark-id">Id: </label><input type="text" id="editBookmarkId" name="edit-bookmark-id" disabled></div>
+                    <br>
+                    <br>
+                    <flex><button id="editBookmarkButtonCancel"><span>Cancel</span></button><button id="editBookmarkButtonSave" ><span>Save</span></button><button id="editBookmarkButtonDelete" type="delete"><span>Delete</span></button></flex>
+                </main>
+            </panel>
+        </window>
+
+        <!-- Create New Bookmarks Folder -->
+        <window id="createNewBookmarksFolderWindow" style="display: none;">
+            <panel>
+                <header>
+                    <h2>Create new bookmarks folder</h2>
+                </header>
+                <br>
+                <br>
+                <div>
+                    <label for="create-bookmarks-folder-title">Title:</label>
+                    <input type="text" name="create-bookmarks-folder-title" id="createBookmarksFolderTitle" value="Bookmarks">
+                </div>
+                <br>
+                <div>
+                    <label for="create-bookmarks-folder-id">Folder id:</label>
+                    <input type="text" name="create-bookmarks-folder-id" id="createBookmarksFolderId" disabled>
+                </div>
+                <br>
+                <br>
+                <flex>
+                    <button id="createNewBookmarksFolderButtonCancel"><span>Cancel</span></button>
+                    <button id="createNewBookmarksFolderButtonSave"><span>Save</span></button>
+                </flex>
+            </panel>
+        </window>
+        
+        <!-- Edit Bookmark Folder -->
+        <window id="editBookmarksFolderWindow" style="display: none;">
+            <panel>
+                <header>
+                    <h2>Edit bookmarks folder</h2>
+                </header>
+                <br>
+                <br>
+                <div>
+                    <label for="edit-bookmarks-folder-title">Title:</label>
+                    <input type="text" name="edit-bookmarks-folder-title" id="editBookmarksFolderTitle">
+                </div>
+                <br>
+                <div>
+                    <label for="edit-bookmarks-folder-id">Folder id:</label>
+                    <input type="text" name="edit-bookmarks-folder-id" id="editBookmarksFolderId">
+                </div>
+                <br>
+                <br>
+                <flex>
+                    <button id="editBookmarksFolderButtonCancel"><span>Cancel</span></button>
+                    <button id="editBookmarksFolderButtonSave"><span>Save</span></button>
+                    <button id="editBookmarksFolderButtonDelete" type="delete"><span>Delete</span></button>
+                </flex>
+            </panel>
+        </window>
+        
+    </body>
+</html>
